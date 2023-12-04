@@ -1,19 +1,14 @@
 import { CATEGORIES } from "./constants";
 import styles from "./Categories.module.scss";
 
+import CategoryItem from "../CategoryItem";
+
 export default function Categories() {
   return (
-    <div className={styles.categoriesContainer}>
-      {CATEGORIES.map(({ title, id, text }) => (
-        <div key={id}>
-          <div className={styles.categoryContainer}>
-            <div>
-              <h2> {title}</h2>
-              <p>{text}</p>
-            </div>
-          </div>
-        </div>
+    <ul className={styles.categoriesContainer}>
+      {CATEGORIES.map(({ title, id, text, imageUrl }) => (
+        <CategoryItem key={id} title={title} text={text} imageUrl={imageUrl} />
       ))}
-    </div>
+    </ul>
   );
 }
