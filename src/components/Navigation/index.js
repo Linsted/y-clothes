@@ -16,6 +16,9 @@ export default function Navigation() {
           <Link className={styles.navLink} to="/shop">
             SHOP
           </Link>
+          <Link className={styles.navLink} to="/sign-in">
+            Sign In
+          </Link>
         </nav>
       </header>
       <Outlet />
